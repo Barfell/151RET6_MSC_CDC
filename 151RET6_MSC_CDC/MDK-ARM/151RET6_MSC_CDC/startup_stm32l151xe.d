@@ -1,0 +1,1 @@
+151ret6_msc_cdc\startup_stm32l151xe.o: startup_stm32l151xe.s
