@@ -79,7 +79,7 @@ uint8_t  *USBD_MC_GetOtherSpeedCfgDesc (uint16_t *length);
 uint8_t  *USBD_MC_GetDeviceQualifierDescriptor (uint16_t *length);
 static uint8_t  USBD_MC_RxReady (USBD_HandleTypeDef *pdev);
 static void MC_Switch_MSC(USBD_HandleTypeDef *pdev);
-static void MC_Switch_CDC(USBD_HandleTypeDef *pdev);
+/*static*/ void MC_Switch_CDC(USBD_HandleTypeDef *pdev);
 
 
 /**
@@ -696,7 +696,7 @@ static void MC_Switch_MSC(USBD_HandleTypeDef *pdev)
   pdev->pClassData = &msc_handle;
 }
 
-static void MC_Switch_CDC(USBD_HandleTypeDef *pdev)
+/*static*/ void MC_Switch_CDC(USBD_HandleTypeDef *pdev)
 {
   static USBD_CDC_HandleTypeDef cdc_handle;
   

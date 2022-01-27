@@ -3,7 +3,7 @@
 <title>Static Call Graph - [151RET6_MSC_CDC\151RET6_MSC_CDC.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 151RET6_MSC_CDC\151RET6_MSC_CDC.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Jan 26 01:43:27 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Jan 27 19:17:51 2022
 <BR><P>
 <H3>Maximum Stack Usage =        304 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1042,6 +1042,18 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l151xe.o(RESET)
 </UL>
+<P><STRONG><a name="[dc]"></a>MC_Switch_CDC</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, usbd_composite.o(i.MC_Switch_CDC))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MC_Switch_CDC
+</UL>
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_RegisterInterface
+</UL>
+<BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_Setup
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_Init
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_DataOut
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_DataIn
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_RxReady
+</UL>
+
 <P><STRONG><a name="[e9]"></a>MSC_BOT_CplClrFeature</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, usbd_msc_bot.o(i.MSC_BOT_CplClrFeature))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = MSC_BOT_CplClrFeature &rArr; MSC_BOT_SendCSW &rArr; USBD_LL_Transmit &rArr; HAL_PCD_EP_Transmit &rArr; USB_EPStartXfer &rArr; USB_WritePMA
 </UL>
@@ -1583,8 +1595,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_Transmit
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_BOT_DataIn
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_CDC
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_composite.o(.data)
 </UL>
@@ -1593,8 +1605,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_GetRxDataSize
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_BOT_DataOut
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_CDC
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_composite.o(.data)
 </UL>
@@ -1619,8 +1631,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_PrepareReceive
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_LL_OpenEP
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MSC_BOT_Init
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_CDC
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_composite.o(.data)
 </UL>
@@ -1635,8 +1647,8 @@ Global Symbols
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlPrepareRx
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlSendData
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CtlError
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_CDC
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MC_Switch_MSC
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbd_composite.o(.data)
 </UL>
@@ -2835,18 +2847,6 @@ Local Symbols
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_ready
 </UL>
 <BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_write
-</UL>
-
-<P><STRONG><a name="[dc]"></a>MC_Switch_CDC</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, usbd_composite.o(i.MC_Switch_CDC))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MC_Switch_CDC
-</UL>
-<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_CDC_RegisterInterface
-</UL>
-<BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_Setup
-<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_Init
-<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_DataOut
-<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_DataIn
-<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_MC_RxReady
 </UL>
 
 <P><STRONG><a name="[de]"></a>MC_Switch_MSC</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, usbd_composite.o(i.MC_Switch_MSC))
